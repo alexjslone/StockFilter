@@ -1,4 +1,5 @@
 #from chatgpt
+#test
 import yfinance as yf
 import matplotlib.pyplot as plt
 
@@ -16,9 +17,15 @@ def visualize_stocks(stock_data):
     plt.show()
 
 if __name__ == "__main__":
-    symbol = 'AAPL'  # Example stock symbol (Apple Inc.)
-    start_date = '2021-01-01'
-    end_date = '2021-12-31'
+    all_tickers = yf.download('')
+    print(all_tickers)
+    all_data = all_tickers.history(start='01-01-2023')
+    print(all_data)
+    #Need to figure out why it's giving me a no objects to concatenate error? 
+    """
+    symbol = 'ABNB'  # Example stock symbol (Airbnb.)
+    start_date = '2023-01-01'
+    end_date = '2024-3-7'
     percentage_drop_threshold = 25
 
     # Fetch stock data
@@ -29,3 +36,4 @@ if __name__ == "__main__":
 
     # Visualize
     visualize_stocks(data)
+    """
